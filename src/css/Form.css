@@ -1,0 +1,34 @@
+@tailwind components;
+
+@layer components {
+	.form-container {
+		@apply flex flex-col items-center justify-center gap-2;
+	}
+
+	.form-container > button,
+	.form-container > div > button {
+		@apply w-60 cursor-pointer rounded-lg bg-zinc-800 px-4 py-2 font-bold outline-none transition-colors duration-500 ease-in-out hover:bg-zinc-950 sm:w-80;
+	}
+
+	.form-container > div {
+		@apply flex flex-col items-center justify-center gap-2 md:flex-row;
+	}
+
+	.form-container > div > label {
+		@apply flex w-min flex-col items-center justify-center gap-2 text-center font-bold md:w-80;
+	}
+
+	.form-container > div > label > select,
+	.form-container > div > label > input,
+	.form-container > div > label > p {
+		@apply inline w-60 rounded-lg bg-zinc-600 px-2 py-1 outline-none;
+	}
+
+	.form-container > div > label > p {
+		background-color: theme(colors.zinc.800);
+	}
+
+	.form-container > div > label > select {
+		@apply rounded-lg bg-zinc-700 px-2 py-1 outline-none;
+	}
+}
